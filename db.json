@@ -1,0 +1,171 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Espresso",
+      "description": "Strong coffee",
+      "category": "Beverage",
+      "price": 2.5,
+      "quantity": 0
+    },
+    {
+      "id": "p2",
+      "name": "Cappuccino",
+      "description": "Coffee with milk",
+      "category": "Beverage",
+      "price": 3,
+      "quantity": 38
+    },
+    {
+      "id": "p3",
+      "name": "Blueberry Muffin",
+      "description": "Fresh muffin",
+      "category": "Food",
+      "price": 1.5,
+      "quantity": 22
+    },
+    {
+      "name": "motoho",
+      "description": "for energy",
+      "category": "drink",
+      "price": 90,
+      "quantity": 8,
+      "id": "1757509740492"
+    }
+  ],
+  "transactions": [
+    {
+      "productId": "p1",
+      "qty": 48,
+      "type": "sale",
+      "note": "sold",
+      "id": "1757509420867",
+      "date": "2025-09-10T13:03:40.867Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p2",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509095178",
+      "id": "1757509460049",
+      "date": "2025-09-10T13:04:20.049Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p1",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509095178",
+      "id": "1757509460054",
+      "date": "2025-09-10T13:04:20.054Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p3",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509095178",
+      "id": "1757509460060",
+      "date": "2025-09-10T13:04:20.060Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p1",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509219116",
+      "id": "1757509663594",
+      "date": "2025-09-10T13:07:43.594Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p2",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509219116",
+      "id": "1757509663604",
+      "date": "2025-09-10T13:07:43.604Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p3",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "1757509219116",
+      "id": "1757509663609",
+      "date": "2025-09-10T13:07:43.609Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p1",
+      "qty": 1,
+      "note": "sale",
+      "id": "1757509676614",
+      "date": "2025-09-10T13:07:56.614Z"
+    },
+    {
+      "type": "sale",
+      "productId": "1757509740492",
+      "qty": 1,
+      "note": "sale",
+      "id": "1757509768107",
+      "date": "2025-09-10T13:09:28.107Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p1",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "",
+      "id": "1757671135902",
+      "date": "2025-09-12T09:58:55.902Z"
+    },
+    {
+      "type": "sale",
+      "productId": "1757509740492",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "",
+      "id": "1757671135917",
+      "date": "2025-09-12T09:58:55.917Z"
+    },
+    {
+      "type": "sale",
+      "productId": "p3",
+      "qty": 1,
+      "note": "sale",
+      "customerId": "",
+      "id": "1757671135921",
+      "date": "2025-09-12T09:58:55.921Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "c1",
+      "name": "Itumeleng",
+      "contact": "+266500111222",
+      "notes": ""
+    },
+    {
+      "name": "Thato",
+      "contact": "57878877",
+      "id": "1757509095178"
+    },
+    {
+      "name": "Alice",
+      "contact": "678909434",
+      "id": "1757509115529"
+    },
+    {
+      "name": "Kari",
+      "contact": "54982233",
+      "id": "1757509188801"
+    },
+    {
+      "name": "Grace",
+      "contact": "+26667879900",
+      "id": "1757509219116"
+    }
+  ]
+}

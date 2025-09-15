@@ -1,0 +1,10 @@
+
+import React, { useEffect, useState } from 'react'
+export default function Sales(){
+  const [products,setProducts]=useState([]); const [cart,setCart]=useState([]); const [customers,setCustomers]=useState([]); const [selectedCustomer,setSelectedCustomer]=useState(''); const [query,setQuery]=useState('')
+  useEffect(()=>{ fetch('http://localhost:5000/api/products').then(r=>r.json()).then(setProducts); fetch('http://localhost:5000/api/customers').then(r=>r.json()).then(setCustomers) },[])
+  const addToCart = p=>{ const c=[...cart]; const found=c.find(i=>i.productId===p.id); if(found) found.qty++; else c.push({productId:p.id,name:p.name,price:p.price,qty:1}); setCart(c) }
+  const checkout = ()=>{ if(!confirm('Complete sale?')) return; Promise.all(cart.map(i=> fetch('http://localhost:5000/api/transactions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'sale',productId:i.productId,qty:i.qty,note:'sale', customerId: selectedCustomer || ''})}))).then(()=>{setCart([]); alert('Sale recorded')}) }
+  const filtered = products.filter(p=> p.name.toLowerCase().includes(query.toLowerCase()) || p.description.toLowerCase().includes(query.toLowerCase()))
+  return (<div><h2>Sales</h2><div style={{display:'flex',gap:8,alignItems:'center',marginBottom:8}}><input placeholder="Search products..." value={query} onChange={e=>setQuery(e.target.value)} /><label>Customer: <select value={selectedCustomer} onChange={e=>setSelectedCustomer(e.target.value)}><option value="">Walk-in</option>{customers.map(c=> <option key={c.id} value={c.id}>{c.name}</option>)}</select></label></div><div className="products-grid">{filtered.map(p=>(<div className="product-card" key={p.id}><h4>{p.name}</h4><p>{p.description}</p><div>Price: {p.price} | Qty: {p.quantity}</div><button onClick={()=>addToCart(p)}>Add</button></div>))}</div><div className="cart"><h3>Cart</h3>{cart.map((c,i)=><div key={i}>{c.name} x {c.qty}</div>)}<button onClick={checkout} disabled={cart.length===0}>Checkout</button></div></div>)
+}
